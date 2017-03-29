@@ -8,6 +8,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -30,11 +33,11 @@
                       <Component id="wGS84Label" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="estLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="nordLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="hightLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="nordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="estLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -149,11 +152,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Convertir"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="convertButtonMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="googlemapsButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aller sur Google Maps"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="googlemapsButtonMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

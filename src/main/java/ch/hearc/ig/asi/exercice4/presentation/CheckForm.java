@@ -5,6 +5,12 @@
  */
 package ch.hearc.ig.asi.exercice4.presentation;
 
+import ch.hearc.ig.asi.exercice4.services.Services;
+import java.awt.Desktop;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author dimitri.mella
@@ -42,6 +48,11 @@ public class CheckForm extends javax.swing.JFrame {
         googlemapsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         estLabel.setText("Est");
 
@@ -60,8 +71,18 @@ public class CheckForm extends javax.swing.JFrame {
         highMN95Output.setText("jLabel8");
 
         convertButton.setText("Convertir");
+        convertButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                convertButtonMouseClicked(evt);
+            }
+        });
 
         googlemapsButton.setText("Aller sur Google Maps");
+        googlemapsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                googlemapsButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,11 +94,11 @@ public class CheckForm extends javax.swing.JFrame {
                         .addGap(142, 142, 142)
                         .addComponent(wGS84Label))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hightLabel)
+                        .addGap(17, 17, 17)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(estLabel)
                             .addComponent(nordLabel)
-                            .addComponent(estLabel))
+                            .addComponent(hightLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(estWGS84Input, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -128,6 +149,30 @@ public class CheckForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * Méthode appellée après la construction de l'objet afin de centrer l'application sur l'écran
+     * @param evt l'événement représentant l'ouverture de la fenêtre
+     */
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        this.setLocationRelativeTo(null); // Centrer l'application sur l'écran
+    }//GEN-LAST:event_formWindowOpened
+
+    /**
+     * Méthode qui va appeller le service Rest pour convertir la valeur
+     * @param evt l'événement du clique sur le bouton de conversion
+     */
+    private void convertButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_convertButtonMouseClicked
+       Map<String,String> mN95Output = Services.convertWGS84ToMN95(this.estWGS84Input.getText(),this.nordWGS84Input.getText(),this.highWGS84Input.getText());
+       this.estMN95Output.setText(mN95Output.get("easting"));
+       this.nordMN95Output.setText(mN95Output.get("northing"));
+       this.highMN95Output.setText(mN95Output.get("altitude"));
+    }//GEN-LAST:event_convertButtonMouseClicked
+
+    private void googlemapsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_googlemapsButtonMouseClicked
+        Services.openGoogleMap(this.estWGS84Input.getText(), this.nordWGS84Input.getText(), this.highWGS84Input.getText());
+        
+    }//GEN-LAST:event_googlemapsButtonMouseClicked
 
     /**
      * @param args the command line arguments
