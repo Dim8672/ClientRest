@@ -159,6 +159,7 @@
     <Component class="javax.swing.JButton" name="googlemapsButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aller sur Google Maps"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="googlemapsButtonMouseClicked"/>

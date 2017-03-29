@@ -78,6 +78,7 @@ public class CheckForm extends javax.swing.JFrame {
         });
 
         googlemapsButton.setText("Aller sur Google Maps");
+        googlemapsButton.setEnabled(false);
         googlemapsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 googlemapsButtonMouseClicked(evt);
@@ -167,6 +168,7 @@ public class CheckForm extends javax.swing.JFrame {
        this.estMN95Output.setText(mN95Output.get("easting"));
        this.nordMN95Output.setText(mN95Output.get("northing"));
        this.highMN95Output.setText(mN95Output.get("altitude"));
+       this.googlemapsButton.setEnabled(true);
     }//GEN-LAST:event_convertButtonMouseClicked
 
     private void googlemapsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_googlemapsButtonMouseClicked

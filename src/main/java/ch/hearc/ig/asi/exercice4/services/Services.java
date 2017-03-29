@@ -23,7 +23,8 @@ import org.json.JSONObject;
 
 /**
  *
- * @author dimitri.mella classe de Services qui contacte les ressources REST
+ * @author dimitri.mella 
+ * classe de Services qui contacte les ressources REST
  */
 public class Services {
 
@@ -88,7 +89,8 @@ public class Services {
             sb.append(est).append("/@");
             sb.append(nord).append(",");
             sb.append(est).append(",");
-            sb.append(high).append("m/data=!3m1!1e3?hl=fr");
+            sb.append(high);
+            sb.append("m/data=!3m1!1e3?hl=fr");
             URI uri = new URI(sb.toString());
             Desktop d = Desktop.getDesktop();
             
