@@ -9,7 +9,7 @@ package ch.hearc.ig.asi.exercice4.presentation;
  *
  * @author dimitri.mella
  */
-public class CheckForm extends javax.swing.JPanel {
+public class CheckForm extends javax.swing.JFrame {
 
     /**
      * Creates new form CheckForm
@@ -27,127 +27,156 @@ public class CheckForm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        wGS84Label = new javax.swing.JLabel();
-        mN95Label = new javax.swing.JLabel();
         estLabel = new javax.swing.JLabel();
         nordLabel = new javax.swing.JLabel();
-        highLabel = new javax.swing.JLabel();
-        estLabelMN95 = new javax.swing.JLabel();
-        nordLabelMN95 = new javax.swing.JLabel();
-        highLabelMN95 = new javax.swing.JLabel();
-        estTextFieldWGS84 = new javax.swing.JTextField();
-        nordTextFieldWGS84 = new javax.swing.JTextField();
-        highTextFieldWGS84 = new javax.swing.JTextField();
+        hightLabel = new javax.swing.JLabel();
+        wGS84Label = new javax.swing.JLabel();
+        mN95Label = new javax.swing.JLabel();
+        estWGS84Input = new javax.swing.JTextField();
+        nordWGS84Input = new javax.swing.JTextField();
+        highWGS84Input = new javax.swing.JTextField();
+        estMN95Output = new javax.swing.JLabel();
+        nordMN95Output = new javax.swing.JLabel();
+        highMN95Output = new javax.swing.JLabel();
         convertButton = new javax.swing.JButton();
-        googleMapButton = new javax.swing.JButton();
+        googlemapsButton = new javax.swing.JButton();
 
-        wGS84Label.setText("WGS84");
-
-        mN95Label.setText("MN95");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         estLabel.setText("Est");
 
         nordLabel.setText("Nord");
 
-        highLabel.setText("Altitude");
+        hightLabel.setText("Altitude");
 
-        estLabelMN95.setText("jLabel6");
+        wGS84Label.setText("WGS84");
 
-        nordLabelMN95.setText("jLabel7");
+        mN95Label.setText("MN95");
 
-        highLabelMN95.setText("jLabel8");
+        estMN95Output.setText("jLabel6");
+
+        nordMN95Output.setText("jLabel7");
+
+        highMN95Output.setText("jLabel8");
 
         convertButton.setText("Convertir");
 
-        googleMapButton.setText("Voir sur Google Map");
+        googlemapsButton.setText("Aller sur Google Maps");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
+                        .addGap(142, 142, 142)
+                        .addComponent(wGS84Label))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hightLabel)
                             .addComponent(nordLabel)
-                            .addComponent(estLabel)
-                            .addComponent(highLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                            .addComponent(estLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nordTextFieldWGS84, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                            .addComponent(highTextFieldWGS84)
-                            .addComponent(estTextFieldWGS84)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(wGS84Label)
-                        .addGap(6, 6, 6)))
+                            .addComponent(estWGS84Input, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(nordWGS84Input)
+                            .addComponent(highWGS84Input))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(mN95Label))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nordLabelMN95)
-                            .addComponent(estLabelMN95)
-                            .addComponent(highLabelMN95)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(googleMapButton)))
-                .addGap(37, 37, 37))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                    .addComponent(estMN95Output)
+                    .addComponent(mN95Label)
+                    .addComponent(nordMN95Output)
+                    .addComponent(highMN95Output))
+                .addGap(82, 82, 82))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(67, 67, 67)
                 .addComponent(convertButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(googlemapsButton)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(mN95Label))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(wGS84Label)))
-                .addGap(34, 34, 34)
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wGS84Label)
+                    .addComponent(mN95Label))
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(estLabel)
-                    .addComponent(estLabelMN95)
-                    .addComponent(estTextFieldWGS84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(estWGS84Input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estMN95Output))
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nordLabel)
-                    .addComponent(nordLabelMN95)
-                    .addComponent(nordTextFieldWGS84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(nordWGS84Input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nordMN95Output))
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(highLabel)
-                    .addComponent(highLabelMN95)
-                    .addComponent(highTextFieldWGS84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hightLabel)
+                    .addComponent(highWGS84Input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(highMN95Output))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(convertButton)
-                    .addComponent(googleMapButton))
-                .addGap(32, 32, 32))
+                    .addComponent(googlemapsButton))
+                .addGap(23, 23, 23))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(CheckForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(CheckForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(CheckForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(CheckForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CheckForm().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton convertButton;
     private javax.swing.JLabel estLabel;
-    private javax.swing.JLabel estLabelMN95;
-    private javax.swing.JTextField estTextFieldWGS84;
-    private javax.swing.JButton googleMapButton;
-    private javax.swing.JLabel highLabel;
-    private javax.swing.JLabel highLabelMN95;
-    private javax.swing.JTextField highTextFieldWGS84;
+    private javax.swing.JLabel estMN95Output;
+    private javax.swing.JTextField estWGS84Input;
+    private javax.swing.JButton googlemapsButton;
+    private javax.swing.JLabel highMN95Output;
+    private javax.swing.JTextField highWGS84Input;
+    private javax.swing.JLabel hightLabel;
     private javax.swing.JLabel mN95Label;
     private javax.swing.JLabel nordLabel;
-    private javax.swing.JLabel nordLabelMN95;
-    private javax.swing.JTextField nordTextFieldWGS84;
+    private javax.swing.JLabel nordMN95Output;
+    private javax.swing.JTextField nordWGS84Input;
     private javax.swing.JLabel wGS84Label;
     // End of variables declaration//GEN-END:variables
 }
