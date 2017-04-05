@@ -9,7 +9,6 @@ import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
@@ -79,7 +78,7 @@ public class Services {
     /**
      * Méthode permettant d'ouvrir le navigateur et d'afficher la destination sur Google Maps
      * @param est latitude au format WGS84
-     * @param nord lontitude au format WGS84
+     * @param nord longitude au format WGS84
      * @param high altitude au format WGS84
      */
     public static void openGoogleMap(String est, String nord, String high){

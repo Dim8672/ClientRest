@@ -6,9 +6,6 @@
 package ch.hearc.ig.asi.exercice4.presentation;
 
 import ch.hearc.ig.asi.exercice4.services.Services;
-import java.awt.Desktop;
-import java.net.URI;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -172,8 +169,7 @@ public class CheckForm extends javax.swing.JFrame {
     }//GEN-LAST:event_convertButtonMouseClicked
 
     private void googlemapsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_googlemapsButtonMouseClicked
-        Services.openGoogleMap(this.estWGS84Input.getText(), this.nordWGS84Input.getText(), this.highWGS84Input.getText());
-        
+        Services.openGoogleMap(this.estWGS84Input.getText(), this.nordWGS84Input.getText(), this.highWGS84Input.getText());        
     }//GEN-LAST:event_googlemapsButtonMouseClicked
 
     /**
